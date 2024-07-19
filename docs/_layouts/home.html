@@ -8,7 +8,7 @@
 <main class="page-content" aria-label="Content">
     <div class="wrapper">
         {% for artwork in site.art_previous %}
-            <img src="{{ '/assets/collections/art_previous/' | append artwork.image | relative_url }}" alt="{{ artwork.title }}">
+            <img src="{{ '/assets/collections/art_previous/' artwork.image | relative_url }}" alt="{{ artwork.title }}">
             <p>{{ artwork.title }} <span class="size">{{ artwork.size }}</span>
             {% if artwork.sold %} <span class="dot red"></span>{% endif %}</p>
         {% endfor %}

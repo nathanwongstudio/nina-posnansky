@@ -4,3 +4,17 @@
 body {
     font-family: Helvetica Neue, Helvetica, sans-serif;
 }
+
+
+/* components */
+
+.dot {
+    display: block;
+    content: ' ';
+    width: 0.5em;
+    height: 0.5em;
+    margin-top: 0.25em;
+    margin-left: 0.25em;
+    background: black;
+    border-radius: 1em;
+}

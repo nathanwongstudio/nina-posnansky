@@ -9,7 +9,7 @@
     <div class="wrapper">
         {% for artwork in site.art_previous %}
 
-            {% include images name={{ artwork.image }} %}
+            {% include images name=artwork.image %}
             <p>{{ artwork.title }} <span class="size">{{ artwork.size }}</span>
             {% if artwork.sold %} <span class="dot red"></span>{% endif %}</p>
         {% endfor %}

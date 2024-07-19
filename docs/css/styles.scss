@@ -17,4 +17,8 @@ body {
     margin-left: 0.25em;
     background: black;
     border-radius: 1em;
+
+    &.red {
+        background: red;
+    }
 }

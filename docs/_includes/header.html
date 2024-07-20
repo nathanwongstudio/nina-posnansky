@@ -1,10 +1,4 @@
 <header>
-
-  <div class="main-title">
-    <h1>Nina Posnansky</h1>
-    <h3>{{ page.title }}</h3>
-  </div>
-
   <nav>
     <ul>
       {% for item in site.data.nav.docs %}
@@ -15,6 +9,11 @@
       {% endfor %}
     </ul>
   </nav>
+
+  <div class="main-title">
+    <h1>Nina Posnansky</h1>
+    <h3>{{ page.title }}</h3>
+  </div>
 
   <h4 class="subtitle">{{ page.subtitle }}</h4>
 </header>

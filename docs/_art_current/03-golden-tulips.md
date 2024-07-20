@@ -3,5 +3,5 @@ title: Golden Tulips
 size: 15 x 11
 sold: false
 image: NP03.jpg
-layout_width: 1
+layout_width: 1-2
 ---

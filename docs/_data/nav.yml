@@ -5,4 +5,7 @@ docs:
   url: /
 
 - title: Previous Works
-  url: /previous-work.html
+  url: /previous-work/
+
+- title: About
+  url: /about/

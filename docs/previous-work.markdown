@@ -7,6 +7,8 @@ set: art_previous
 
 layout: artwork-display
 
+permalink: /previous-work/
+
 ---
 
 A red dot <span class="dot red"></span> indicates the paintings are sold.

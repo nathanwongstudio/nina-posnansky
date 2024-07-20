@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+    <main class="page-content" aria-label="Content">
+
+      <div class="content">{{ content }}</div>
+
+      {% assign artworks = site[page.set] %}
+
+      {% include artworks.html artworks=artworks %}
+
+      {% include footer.html %}
+    </main>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<div class="wrapper artworks">
+
+  {% for artwork in include.artworks %}
+    {% capture imagepath %}/assets/collections/{{ artwork.collection }}/{{ artwork.image }} {% endcapture %}
+    <div class="art {% if artwork.layout_width != blank %}w-{{ artwork.layout_width }}{% endif %}">
+      <img src="{{ imagepath  | relative_url }}" alt="{{ artwork.title }}">
+      <div class="data">
+        <p class="title">{{ artwork.title }}</p>
+        <p class="meta">{{ artwork.size }}
+          {% if artwork.sold %}
+            <span class="dot red"></span>
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  {% endfor %}
+</div>

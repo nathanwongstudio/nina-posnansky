@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.html": "liquid",
+        "*.sass": "liquid-scss"
+    }
+
+}

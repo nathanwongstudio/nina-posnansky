@@ -1,24 +1,298 @@
 ---
 ---
+
+
 html, body {
-    background: black;
+    font-size: 16px;
+
     color: white;
-}
-body {
-    font-family: Helvetica Neue, Helvetica, sans-serif;
+    background: black;
 }
 
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+
+    width: 100%;
+}
+
+/* tags */
+img {
+    max-width:100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: 1.2;
+
+    margin:0;
+}
+
+h1 {
+    font-size: 3.815rem;
+    font-weight: bold;
+
+    @media screen and (width <= 40em) {
+        font-size: 2.986rem;
+    }
+}
+
+h2 {
+    font-size: 3.052rem;
+    font-weight: bold;
+
+    @media screen and (width <= 40em) {
+        font-size: 2.488rem;
+    }
+}
+
+h3 {
+    font-size: 2.441rem;
+    font-weight: 300;
+
+    @media screen and (width <= 40em) {
+        font-size: 2.074rem;
+    }
+}
+
+h4 {
+    font-size: 1.953rem;
+    font-weight: 300;
+
+    @media screen and (width <= 40em) {
+        font-size: 1.728rem;
+    }
+}
+
+h5 {
+    font-size: 1.563rem;
+    font-weight: 200;
+
+    @media screen and (width <= 40em) {
+        font-size: 1.44rem;
+    }
+}
+
+h6 {
+    font-size: 1.25rem;
+    font-weight: 200;
+
+    @media screen and (width <= 40em) {
+        font-size: 1.2rem;
+    }
+}
+
+/* layouts */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    text-align: center;
+}
+
+footer {
+    padding: 2em 0 4em;
+
+    text-align: center;
+}
+
+.main-title {
+    // display: grid;
+    // grid-template-columns: 2fr 1fr;
+    // align-items: center;
+
+    padding: 1rem;
+
+    text-align: center;
+
+    // @media screen and (width <= 40em) {
+    //     grid-template-columns: 1fr;
+
+    //     padding-top: 1rem;
+
+    //     text-align: center;
+    //     grid-gap: 1rem;
+    // }
+
+    h1, h2, h3, h4, h5, h6 {
+        line-height:0.85;
+
+        display: block;
+
+        margin: 1.5rem;
+    }
+
+    // *:last-child {
+    //     text-align: right;
+
+    //     @media screen and (width <= 40em) {
+    //         text-align: center;
+    //     }
+    
+    // }
+
+}
+
+.subtitle {
+    // margin-top:2em;
+
+    @media screen and (width <= 40em) {
+        margin-top:1em;
+    }
+}
+
+nav {
+    position: absolute;
+    top:3rem;
+    right:3rem;
+
+    text-align: right;
+
+    @media screen and (width <= 40em) {
+        position: relative;
+        right:0;
+
+        margin-top: 1em;
+
+        text-align: center;
+    }
+
+    ul {
+        margin:0;
+        padding:0;
+
+        list-style-type: none;
+
+        @media screen and (width <= 40em) {
+            display: flex;
+            flex-flow: row wrap;
+            gap: 1em;
+
+            justify-content: center;
+        }
+
+        li {
+            display: block;
+
+            width: auto;
+
+            margin:0 0 1em;
+
+            padding:0;
+
+            @media screen and (width <= 40em) {
+                display: inline-block;
+
+                margin:0;
+            }
+
+            &.active, &:hover {
+                a {
+                    border: 1px solid white;
+                }
+            }
+
+            a, a:visited {
+                font-weight: bold;
+
+                display: inline-block;
+
+                padding: 0.5em;
+
+                text-decoration: none;
+
+                color: white;
+
+                border: 1px solid transparent;
+            }
+
+        }
+    }
+}
+
+.content {
+    text-align: center;
+}
+
+.artworks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2em;
+
+    .art {
+        position: relative;
+
+        flex-shrink:1;
+
+        &.w-1 {
+            flex-basis: 100%;
+
+            max-width: 900px;
+        }
+
+        &.w-1-2 {
+            flex-basis:calc(50% - 1em);
+        }
+        
+        &[class*="w-"] {
+            max-height: 95vh;
+    
+            @media screen and (width <= 40em) {
+                flex-basis: 100%;
+    
+                max-width: 900px;
+            }
+        }
+
+        img {
+            display: block;
+
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height:calc(95vh - 2.5em);
+            margin: auto;
+        }
+
+        .data {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+
+            box-sizing: border-box;
+            max-width: 400px;
+            margin: auto;
+            padding: 0 1.5em;
+
+            .title {
+                font-weight: bold;
+            }
+
+            .meta {
+                text-align: right;
+            }
+        }
+    }
+}
 
 /* components */
 
 .dot {
     display: inline-block;
-    content: ' ';
+
     width: 0.5em;
     height: 0.5em;
     margin:0.125em;
-    background: black;
+
+    content: ' ';
+
     border-radius: 1em;
+    background: black;
 
     &.red {
         background: red;

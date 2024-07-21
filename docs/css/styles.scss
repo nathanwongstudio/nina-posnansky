@@ -335,3 +335,40 @@ nav {
         background: red;
     }
 }
+
+/* lazy load images */
+
+.no-js img[loading='lazy'] {
+    opacity:1;
+}
+
+img[loading='lazy'] {
+    transition: opacity 250ms ease-out;
+
+    opacity:1;
+}
+
+.is-loading img[loading='lazy'] {
+    transition: opacity 250ms ease-out;
+
+    opacity:0;
+}
+
+.is-loading {
+    position: relative;
+}
+
+.is-loading::after {
+    position: absolute;
+    inset:0;
+
+    display: block;
+
+    width:100%;
+    height:100%;
+    margin: auto;
+
+    content: ' ';
+
+    background: #3d3d3d;
+}

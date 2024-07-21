@@ -3,7 +3,12 @@
   {% for artwork in include.artworks %}
     {% capture imagepath %}/assets/collections/{{ artwork.collection }}/{{ artwork.image }} {% endcapture %}
     <div class="art {% if artwork.layout_width != blank %}w-{{ artwork.layout_width }}{% endif %}">
-      <img src="{{ imagepath  | relative_url }}" alt="{{ artwork.title }}">
+      <figure class="is-loading">
+        <img
+          src="{{ imagepath  | relative_url }}"
+          alt="{{ artwork.title }}"
+          loading="lazy">
+      </figure>
       <div class="data">
         <p class="title">{{ artwork.title }}</p>
         <p class="meta">{{ artwork.size }}

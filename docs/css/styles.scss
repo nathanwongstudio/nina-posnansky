@@ -8,6 +8,8 @@ html, body {
 :root {
     --text-color: #e4e2d9;
     --bg-color: #000;
+    --figure-height: 95vh;
+    --image-height: calc(var(--figure-height) - 2.5em);
 }
 
 html, body {
@@ -278,7 +280,7 @@ nav {
         }
         
         &[class*="w-"] {
-            max-height: 95vh;
+            max-height: var(--figure-height);
     
             @media screen and (width <= 40em) {
                 flex-basis: 100%;
@@ -293,7 +295,7 @@ nav {
             width: auto;
             max-width: 100%;
             height: auto;
-            max-height:calc(95vh - 2.5em);
+            max-height:var(--image-height);
             margin: auto;
         }
 
@@ -348,27 +350,12 @@ img[loading='lazy'] {
     opacity:1;
 }
 
+.is-loading {
+    height: var(--image-height);
+}
+
 .is-loading img[loading='lazy'] {
     transition: opacity 250ms ease-out;
 
     opacity:0;
-}
-
-.is-loading {
-    position: relative;
-}
-
-.is-loading::after {
-    position: absolute;
-    inset:0;
-
-    display: block;
-
-    width:100%;
-    height:100%;
-    margin: auto;
-
-    content: ' ';
-
-    background: #3d3d3d;
 }

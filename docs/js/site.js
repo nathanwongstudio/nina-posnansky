@@ -36,5 +36,5 @@ function lazy() {
 				img.classList.remove("is-loading");
 			}
 		} // if 'loading' supported
-	}, "300");
+	}, "200");
 }

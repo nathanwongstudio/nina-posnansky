@@ -5,7 +5,7 @@
     <div class="art {% if artwork.layout_width != blank %}w-{{ artwork.layout_width }}{% endif %}">
       <figure class="is-loading">
         <img
-          src="{{ imagepath  | relative_url }}"
+          src="{{ imagepath | relative_url }}"
           alt="{{ artwork.title }}"
           loading="lazy">
       </figure>

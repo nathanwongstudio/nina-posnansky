@@ -345,7 +345,12 @@ nav {
 }
 
 img[loading='lazy'] {
+    /* stylelint-disable*/
     transition: opacity 250ms ease-out;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 250ms;
+    -webkit-transition-timing-function: ease-out;
+    /* stylelint-enable */
 
     opacity:1;
 }
@@ -355,7 +360,12 @@ img[loading='lazy'] {
 }
 
 .is-loading img[loading='lazy'] {
+    /* stylelint-disable*/
     transition: opacity 250ms ease-out;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 250ms;
+    -webkit-transition-timing-function: ease-out;
+    /* stylelint-enable */
 
     opacity:0;
 }
@@ -371,6 +381,8 @@ img[loading='lazy'] {
 
     /* stylelint-disable-next-line */
     background: rgba(24, 24, 24, 0.7);
-    
+   
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-backdrop-filter: blur(5px); 
     backdrop-filter: blur(5px);
 }

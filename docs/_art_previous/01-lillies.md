@@ -1,7 +1,7 @@
 ---
 title: Lillies
 size: 15 x 22
-sold: false
+sold: true
 image: n911mm.jpg
 layout_width: 1
 ---

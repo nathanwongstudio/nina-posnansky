@@ -22,8 +22,8 @@ title: Nina Posnansky
 email: ninaposnansky.com@itsallwong.com
 description: >- # this means to ignore newlines until "baseurl:"
   Website portfolio for Nina Posnansky.
-baseurl: "/nina-posnansky" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.ninaposnansky.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 # theme: minima

@@ -1,6 +1,7 @@
 ---
 title: Carousel Horse
-size: 17 x 15
+width: 17
+height: 15
 sold: false
 image: n98gg.jpg
 layout_width: 1

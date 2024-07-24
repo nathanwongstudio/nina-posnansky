@@ -1,6 +1,7 @@
 ---
 title: Bowl Of Oranges
-size: 15 x 11
+width: 15
+height: 11
 sold: true
 image: n92gg.jpg
 layout_width: 1-2

@@ -1,6 +1,7 @@
 ---
 title: Mexican Bowl Of Tulips
-size: 15 x 22
+width: 15
+height: 22
 sold: true
 image: n910.jpg
 layout_width: 1

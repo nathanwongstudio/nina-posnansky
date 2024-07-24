@@ -1,6 +1,7 @@
 ---
 title: Lady In Orange
-size: 11 x 15
+width: 11
+height: 15
 sold: true
 image: n99mm.jpg
 

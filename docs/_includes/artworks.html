@@ -11,7 +11,8 @@
       </figure>
       <div class="data">
         <p class="title">{{ artwork.title }}</p>
-        <p class="meta">{{ artwork.size }}
+        <p class="meta">
+          {{ artwork.height }} x {{ artwork.width }}
           {% if artwork.sold %}
             <span class="dot red"></span>
           {% endif %}

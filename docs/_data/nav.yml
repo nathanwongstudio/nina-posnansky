@@ -1,8 +1,10 @@
 docs_list_title: Navigation
 docs:
+    - title: 2026
+      url: /
 
-- title: Current Works
-  url: /
+    - title: 2024
+      url: /2024/
 
-- title: Previous Works
-  url: /previous-work/
+    - title: Previous
+      url: /previous-work/

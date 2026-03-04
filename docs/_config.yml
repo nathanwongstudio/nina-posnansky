@@ -51,6 +51,5 @@ plugins:
 #   - vendor/ruby/
 
 collections:
-    - art_previous
-    - art_2024
-    - art_2026
+    artworks:
+        output: false

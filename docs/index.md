@@ -1,7 +1,8 @@
 ---
-title: 2026
+title: 2025
 
-set: art_2026
+year: "2025"
+nav_order: 1
 
 subtitle: Acrylics on Paper
 

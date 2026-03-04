@@ -3,7 +3,8 @@ title: Previous Works
 
 subtitle: Acrylics on Paper
 
-set: art_previous
+year: "previous"
+nav_order: 3
 
 layout: artwork-display
 

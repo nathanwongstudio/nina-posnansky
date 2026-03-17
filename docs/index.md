@@ -1,7 +1,7 @@
 ---
-title: 2025
+title: 2024
 
-year: "2025"
+year: '2024'
 nav_order: 1
 
 subtitle: Acrylics on Paper

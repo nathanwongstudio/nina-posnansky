@@ -2,7 +2,7 @@
 
   <nav>
     <ul>
-      {% assign art_pages = site.pages | where: "layout", "artwork-display" | sort: "nav_order" %}
+      {% assign art_pages = site.pages | where: "layout", "artwork-display" | where_exp: "item", "item.nav_exclude != true" | sort: "nav_order" %}
       {% for item in art_pages %}
         <li class="{% if item.url == page.url %}active{% endif %}">
           <a href="{{ item.url | relative_url }}">{{ item.title }}</a>

@@ -9,7 +9,7 @@
 
       <div class="content">{{ content }}</div>
 
-      {% assign artworks = site[page.set] %}
+      {% assign artworks = site.artworks | where: "year", page.year %}
 
       {% include artworks.html artworks=artworks %}
 

@@ -21,14 +21,14 @@
 title: Nina Posnansky
 email: ninaposnansky.com@itsallwong.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Website portfolio for Nina Posnansky.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.ninaposnansky.com" # the base hostname & protocol for your site, e.g. http://example.com
+    Website portfolio for Nina Posnansky.
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://www.ninaposnansky.com' # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 # theme: minima
 plugins:
-  - jekyll-feed
+    - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -51,5 +51,5 @@ plugins:
 #   - vendor/ruby/
 
 collections:
-  - art_previous
-  - art_current
+    artworks:
+        output: false

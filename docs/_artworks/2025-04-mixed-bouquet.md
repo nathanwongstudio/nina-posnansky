@@ -1,5 +1,5 @@
 ---
-year: "2025"
+year: '2025'
 title: Mixed Bouquet
 width: 11
 height: 15

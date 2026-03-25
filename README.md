@@ -9,7 +9,12 @@ All artwork images are ©Copyright Nina Posnansky Ginsberg
 ## Prerequisites
 
 - [Ruby](https://www.ruby-lang.org/en/downloads/) 2.7+
-- [Bundler](https://bundler.io/) (`gem install bundler`)
+- [Bundler](https://bundler.io/) 2.x (`gem install bundler -v '~> 2.0'`)
+
+> **Note:** The lockfile was generated with Bundler 2.x. Bundler 4 changed the lockfile format, which may cause issues with GitHub Pages builds. Stick with Bundler 2.x to be safe:
+> ```bash
+> gem install bundler -v '~> 2.0'
+> ```
 
 See the [Jekyll docs](https://jekyllrb.com/docs/installation/) for platform-specific setup instructions.
 

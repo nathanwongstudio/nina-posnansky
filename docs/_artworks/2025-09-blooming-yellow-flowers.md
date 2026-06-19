@@ -3,7 +3,7 @@ year: "2025"
 title: Blooming Yellow Flowers
 width: 11
 height: 15
-sold: false
+sold: true
 image: NP26-9.jpg
 layout_width: 1-2
 ---

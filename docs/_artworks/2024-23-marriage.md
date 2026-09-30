@@ -4,6 +4,7 @@ title: Marriage
 width: 15
 height: 22
 sold: true
-image: NP23.jpg
+image: /assets/collections/art_2024/NP23.jpg
 layout_width: 1
+order: 23
 ---

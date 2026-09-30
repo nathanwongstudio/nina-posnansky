@@ -1,0 +1,134 @@
+# Pages CMS configuration — https://pagescms.org/docs/configuration/
+# The Jekyll site lives in docs/, so every path below is prefixed with it.
+
+media:
+  input: docs/assets/collections
+  output: /assets/collections
+
+content:
+  - name: artworks
+    label: Artworks
+    type: collection
+    path: docs/_artworks
+    filename:
+      template: "{year}-{primary}.md"
+      field: create
+    view:
+      fields: [title, year, order, sold]
+      primary: title
+      sort: [year, order, title]
+      search: [title]
+      default:
+        sort: year
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: year
+        label: Year
+        type: string
+        required: true
+        description: 'Which page the painting appears on: a year (e.g. 2025) or "previous" for Previous Works.'
+        pattern:
+          regex: "^([0-9]{4}|previous)$"
+          message: 'Use a four-digit year or "previous"'
+      - name: order
+        label: Order
+        type: number
+        required: true
+        description: Position on the page (1 appears first).
+        options:
+          min: 1
+      - name: image
+        label: Image
+        type: image
+        required: true
+        description: Upload into the folder for this year (e.g. art_2025).
+        options:
+          extensions: [jpg, jpeg, png, webp]
+          rename: false
+      - name: height
+        label: Height (inches)
+        type: number
+        required: true
+      - name: width
+        label: Width (inches)
+        type: number
+        required: true
+      - name: sold
+        label: Sold
+        type: boolean
+        description: Shows a red dot next to the painting.
+      - name: layout_width
+        label: Layout width
+        type: select
+        options:
+          values:
+            - name: "1-2"
+              label: Half width
+            - name: "1"
+              label: Full width
+
+  - name: page-2025
+    label: 2025 page
+    type: file
+    path: docs/index.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+        description: Shown in the navigation and page heading.
+      - name: subtitle
+        label: Subtitle
+        type: string
+      - name: body
+        label: Introduction
+        type: text
+        description: 'Markdown/HTML. Keep <span class="dot red"></span> to show the red dot.'
+      - { name: year, type: string, hidden: true }
+      - { name: nav_order, type: number, hidden: true }
+      - { name: layout, type: string, hidden: true }
+
+  - name: page-2024
+    label: 2024 page
+    type: file
+    path: docs/2024.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+        description: Shown in the navigation and page heading.
+      - name: subtitle
+        label: Subtitle
+        type: string
+      - name: body
+        label: Introduction
+        type: text
+        description: 'Markdown/HTML. Keep <span class="dot red"></span> to show the red dot.'
+      - { name: year, type: string, hidden: true }
+      - { name: nav_order, type: number, hidden: true }
+      - { name: layout, type: string, hidden: true }
+      - { name: permalink, type: string, hidden: true }
+
+  - name: page-previous
+    label: Previous Works page
+    type: file
+    path: docs/previous-work.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+        description: Shown in the navigation and page heading.
+      - name: subtitle
+        label: Subtitle
+        type: string
+      - name: body
+        label: Introduction
+        type: text
+        description: 'Markdown/HTML. Keep <span class="dot red"></span> to show the red dot.'
+      - { name: year, type: string, hidden: true }
+      - { name: nav_order, type: number, hidden: true }
+      - { name: layout, type: string, hidden: true }
+      - { name: permalink, type: string, hidden: true }

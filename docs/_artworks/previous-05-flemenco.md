@@ -4,6 +4,7 @@ title: Flemenco
 width: 15
 height: 22
 sold: true
-image: flemenco.jpg
+image: /assets/collections/art_previous/flemenco.jpg
 layout_width: 1-2
+order: 5
 ---

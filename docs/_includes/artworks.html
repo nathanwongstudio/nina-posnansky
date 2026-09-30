@@ -1,7 +1,12 @@
 <div class="wrapper artworks">
 
   {% for artwork in include.artworks %}
-    {% assign imagepath = "/assets/collections/art_" | append: artwork.year | append: "/" | append: artwork.image %}
+    {% assign first_char = artwork.image | slice: 0 %}
+    {% if first_char == "/" %}
+      {% assign imagepath = artwork.image %}
+    {% else %}
+      {% assign imagepath = "/assets/collections/art_" | append: artwork.year | append: "/" | append: artwork.image %}
+    {% endif %}
     <div class="art {% if artwork.layout_width != blank %}w-{{ artwork.layout_width }}{% endif %}">
       <figure class="is-loading">
         <img
